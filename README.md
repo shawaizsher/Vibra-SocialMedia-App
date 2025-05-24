@@ -34,28 +34,27 @@ Make sure you have the following installed:
 
 ## Setup
 
-Setup
-Open the project folder in your preferred Java IDE (IntelliJ IDEA, Eclipse, etc.).
+1. Open the project folder in your preferred Java IDE (IntelliJ IDEA, Eclipse, etc.).
 
-Add the required JAR files to your project’s library/module dependencies. These include JavaFX SDK, SendGrid, Tyrus WebSocket client, and the JDBC driver.
+2. Add the required JAR files to your project’s library/module dependencies. These include:
+   - JavaFX SDK
+   - SendGrid
+   - Tyrus WebSocket client
+   - JDBC driver
 
-Configure the VM options for JavaFX by adding the following (adjust the path as needed):
+3. Configure VM options for JavaFX. For example:
+    --module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
+Adjust the path to your local JavaFX SDK accordingly.
 
-css
-Copy
-Edit
---module-path /path/to/javafx-sdk/lib --add-modules javafx.controls,javafx.fxml
-Set up the database:
+4. Set up the database:
+- Create the database and tables using the provided `schema.sql` file.
+- Update database connection settings (URL, username, password) in your configuration class.
 
-Create the database and tables using the provided schema.sql file.
+5. Configure the SendGrid API key:
+- Obtain an API key from SendGrid.
+- Add the API key to your project configuration or set it as an environment variable.
 
-Update the database connection details (URL, username, password) in the configuration class.
+6. Run the main application class (`Main.java`) to start the application.
 
-Configure the SendGrid API key:
 
-Obtain an API key from SendGrid.
-
-Add the key to your project configuration or set it as an environment variable.
-
-Run the main application class (Main.java) to launch the app.
 
