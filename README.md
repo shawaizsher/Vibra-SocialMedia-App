@@ -47,12 +47,12 @@ Make sure you have the following installed:
 Adjust the path to your local JavaFX SDK accordingly.
 
 4. Set up the database:
-- Create the database and tables using the provided `schema.sql` file.
-- Update database connection settings (URL, username, password) in your configuration class.
+    - Create the database and tables using the provided `schema.sql` file.
+    - Update database connection settings (URL, username, password) in your configuration class.
 
 5. Configure the SendGrid API key:
-- Obtain an API key from SendGrid.
-- Add the API key to your project configuration or set it as an environment variable.
+    - Obtain an API key from SendGrid.
+    - Add the API key to your project configuration or set it as an environment variable.
 
 6. Run the main application class (`Main.java`) to start the application.
 
