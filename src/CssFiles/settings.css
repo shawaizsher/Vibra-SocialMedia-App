@@ -1,0 +1,15 @@
+.label {
+    -fx-font-family: "Aniczar Serif";
+    -fx-font-size: 16px;
+    -fx-text-fill: #222;
+    -fx-padding: 6 12;
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-border-color: transparent;
+}
+
+.label:hover {
+    -fx-text-fill: white;
+    -fx-background-color: #4B429B;
+    -fx-cursor: hand;
+}

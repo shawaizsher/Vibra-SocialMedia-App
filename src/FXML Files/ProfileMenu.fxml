@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="mainLayout" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProfileMenuController">
+
+    <center>
+        <ScrollPane fx:id="scrollPane" fitToWidth="true" style="-fx-padding: 10;">
+            <content>
+                <VBox spacing="15" style="-fx-padding: 10;">
+
+                    <!-- Profile Section -->
+                    <VBox fx:id="profileSection" alignment="CENTER" spacing="10" style="-fx-padding: 20;">
+                        <ImageView fx:id="profilePic" fitHeight="122.0" fitWidth="126.0" preserveRatio="true" />
+                        <Label fx:id="userNameLabel" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="username" />
+                        <Button fx:id="editProfileButton" onAction="#handleEditProfile" text="Edit Profile" />
+                        <HBox fx:id="actionButtonsBox" alignment="CENTER" spacing="10">
+                            <Button fx:id="addFriendButton" text="Add Friend" />
+                            <Button fx:id="blockUserButton" text="Block" />
+                        </HBox>
+                        <HBox fx:id="profileStats" alignment="CENTER" spacing="40" styleClass="profile-stats">
+                            <VBox alignment="CENTER" styleClass="stat-block">
+                                <Label fx:id="friendsCount" styleClass="stat-number" text="0" />
+                                <Label styleClass="stat-label" text="Friends" />
+                            </VBox>
+                            <VBox alignment="CENTER" styleClass="stat-block">
+                                <Label fx:id="postsCount" styleClass="stat-number" text="0" />
+                                <Label styleClass="stat-label" text="Posts" />
+                            </VBox>
+                        </HBox>
+                        <VBox alignment="CENTER" spacing="5" styleClass="bio-section">
+                            <Label styleClass="bio-label" text="Bio" />
+                            <Label fx:id="userBio" styleClass="bio-text" text="This is my bio..." wrapText="true" />
+                        </VBox>
+                        <HBox fx:id="friendRequestButtonsBox" alignment="CENTER" spacing="15" />
+                    </VBox>
+
+                    <!-- Posts Header -->
+                    <Label style="-fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 20 0 0 0;" text="Posts" />
+
+                    <!-- Posts Container -->
+                    <VBox fx:id="postsContainer" spacing="15" />
+
+                </VBox>
+            </content>
+        </ScrollPane>
+
+    </center>
+</BorderPane>

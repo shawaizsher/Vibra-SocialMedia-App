@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="NotificationsController"
+            styleClass="notifications-root">
+
+    <!-- Header Bar -->
+    <HBox spacing="10" alignment="CENTER_LEFT" AnchorPane.topAnchor="0" AnchorPane.leftAnchor="0"
+          AnchorPane.rightAnchor="0" styleClass="notifications-header">
+        <Label text="🔔 Notifications" styleClass="notifications-title"/>
+    </HBox>
+
+    <!-- Notifications List -->
+    <ScrollPane fx:id="scrollPane"
+                fitToWidth="true"
+                prefHeight="400"
+                styleClass="notifications-scroll"
+                AnchorPane.topAnchor="60" AnchorPane.leftAnchor="0"
+                AnchorPane.rightAnchor="0" AnchorPane.bottomAnchor="0">
+
+        <VBox fx:id="notificationsContainer"
+              spacing="12"
+              styleClass="notifications-list">
+        </VBox>
+    </ScrollPane>
+
+</AnchorPane>

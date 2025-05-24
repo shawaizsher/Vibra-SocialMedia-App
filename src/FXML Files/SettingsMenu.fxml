@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane fx:id="mainLayout" prefHeight="616.0" prefWidth="518.0" stylesheets="@../CssFiles/settings.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SettingsMenuController">
+
+    <!-- Top Bar -->
+    <top>
+        <HBox prefHeight="46.0" spacing="10" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0f0c29, #302b63, #24243e);; -fx-padding: 10px;">
+            <Label fx:id="settingsLabel" style="-fx-text-fill: white; -fx-font-size: 16px; -fx-font-weight: bold;" text="Settings" />
+        </HBox>
+    </top>
+
+    <!-- Center: Main Settings Sections with Icons -->
+    <center>
+        <VBox prefHeight="534.0" spacing="20" style="-fx-padding: 20px;">
+
+            <!-- Edit Profile -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <ImageView fitHeight="62.0" fitWidth="59.0">
+                    <image>
+                        <Image url="file:/C:/Users/Sher/Desktop/Vibra-App/Misc%20files/Icons/profileicon.png" />
+                    </image>
+                </ImageView>
+                <Label onMouseClicked="#goToEditProfile" text="Edit Profile">
+                    <font>
+                        <Font name="Heebo Regular" size="20.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <!-- Security -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <ImageView fitHeight="60.0" fitWidth="60.0">
+                    <image>
+                        <Image url="file:/C:/Users/Sher/Desktop/Vibra-App/Misc%20files/Icons/security.png" />
+                    </image>
+                </ImageView>
+                <Label onMouseClicked="#goToPrivacy" text="Security &amp; Privacy">
+                    <font>
+                        <Font name="Heebo Regular" size="20.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <!-- Notifications -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <ImageView fitHeight="52.0" fitWidth="57.0">
+                    <image>
+                        <Image url="file:/C:/Users/Sher/Desktop/Vibra-App/Misc%20files/Icons//notifications.png" />
+                    </image>
+                </ImageView>
+                <Label onMouseClicked="#goToNotifications" text="Notifications">
+                    <font>
+                        <Font name="Heebo Regular" size="20.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+            <!-- About -->
+            <HBox alignment="CENTER_LEFT" spacing="10">
+                <ImageView fitHeight="60.0" fitWidth="58.0">
+                    <image>
+                        <Image url="file:/C:/Users/Sher/Desktop/Vibra-App/Misc%20files/Icons/about.png" />
+                    </image>
+                </ImageView>
+                <Label onMouseClicked="#goToAboutPage" text="About">
+                    <font>
+                        <Font name="Heebo Regular" size="20.0" />
+                    </font>
+                </Label>
+            </HBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

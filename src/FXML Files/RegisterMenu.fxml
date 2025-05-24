@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Circle?>
+
+<StackPane prefHeight="638.0" prefWidth="100.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0f0c29, #302b63, #24243e);"
+           xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="RegisterMenuController">
+
+   <Circle radius="300" style="-fx-fill: #0f0c29; -fx-opacity: 0.1;" translateX="-200" translateY="-250" />
+   <Circle radius="250" style="-fx-fill: #302b63; -fx-opacity: 0.1;" translateX="200" translateY="250" />
+
+   <AnchorPane prefHeight="638.0" prefWidth="534.0">
+      <VBox alignment="CENTER" layoutX="25.0" layoutY="20.0" prefWidth="350" spacing="25.0">
+
+         <VBox alignment="CENTER" spacing="5">
+            <Label style="-fx-font-size: 32px; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold; -fx-text-fill: linear-gradient(to right, #00cfff, #d946ef);" text="VIBRA" />
+            <Label style="-fx-font-size: 14px; -fx-text-fill: #cccccc;" text="Create an Account" />
+         </VBox>
+
+         <VBox spacing="15" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #0f0c29, #302b63, #24243e); -fx-background-radius: 20; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 10, 0, 0, 2); -fx-padding: 30;">
+
+            <Label style="-fx-font-size: 24px; -fx-font-weight: bold; -fx-text-fill: white;" text="Sign Up" />
+
+            <VBox spacing="5">
+               <Label style="-fx-text-fill: #cccccc; -fx-font-size: 12px;" text="Username" />
+               <TextField fx:id="enterUsername" promptText="e.g. johndoe" onKeyReleased="#checkUsername"
+                          style="-fx-background-color: #4B429B; -fx-text-fill: white; -fx-background-radius: 10;
+                                      -fx-padding: 12; -fx-prompt-text-fill: #808080;" />
+               <Label fx:id="usernameStatusLabel" style="-fx-text-fill: #ff6666; -fx-font-size: 11;" text="" />
+            </VBox>
+
+            <VBox spacing="5">
+               <Label style="-fx-text-fill: #cccccc; -fx-font-size: 12px;" text="Email" />
+               <TextField fx:id="enterEmail" promptText="your@email.com"
+                          style="-fx-background-color: #4B429B; -fx-text-fill: white; -fx-background-radius: 10;
+                                      -fx-padding: 12; -fx-prompt-text-fill: #808080;" />
+               <Label fx:id="emailErrorLabel" style="-fx-text-fill: #ff6666; -fx-font-size: 11;" text="" />
+            </VBox>
+
+            <!-- Password -->
+            <VBox spacing="5">
+               <Label style="-fx-text-fill: #cccccc; -fx-font-size: 12px;" text="Password" />
+               <PasswordField fx:id="enterPassword" promptText="Min 8 characters"
+                              style="-fx-background-color: #4B429B; -fx-text-fill: white; -fx-background-radius: 10;
+                                          -fx-padding: 12; -fx-prompt-text-fill: #808080;" />
+               <Label fx:id="passwordErrorLabel" style="-fx-text-fill: #ff6666; -fx-font-size: 11;" text="" />
+            </VBox>
+
+            <!-- Confirm Password -->
+            <VBox spacing="5">
+               <Label style="-fx-text-fill: #cccccc; -fx-font-size: 12px;" text="Confirm Password" />
+               <PasswordField fx:id="confirmPasswordField" promptText="Repeat password"
+                              style="-fx-background-color: #4B429B; -fx-text-fill: white; -fx-background-radius: 10;
+                                          -fx-padding: 12; -fx-prompt-text-fill: #808080;" />
+               <Label fx:id="confirmPasswordErrorLabel" style="-fx-text-fill: #ff6666; -fx-font-size: 11;" text="" />
+            </VBox>
+
+            <!-- Register Button -->
+            <Button fx:id="enterBtn" onAction="#enterBtnClick"
+                    style="-fx-background-color: linear-gradient(to right, #00cfff, #d946ef); -fx-text-fill: white;
+                               -fx-font-weight: bold; -fx-background-radius: 25; -fx-padding: 12 30; -fx-pref-width: 290;
+                               -fx-cursor: hand;"
+                    text="Register" />
+
+            <Hyperlink text="Already have an account? Log in"
+                       onAction="#handleLoginLinkClick"
+                       style="-fx-text-fill: #00cfff; -fx-underline: true; -fx-font-size: 12;"/>
+
+         </VBox>
+      </VBox>
+   </AnchorPane>
+</StackPane>

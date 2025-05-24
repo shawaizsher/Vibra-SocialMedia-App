@@ -1,0 +1,71 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('../Fonts/Poppins-Regular.ttf');
+}
+
+/* Set the whole UI font */
+.root {
+    -fx-font-family: 'Poppins';
+}
+
+/* Background Styling */
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #A4508B, #5F0A87);
+    -fx-background-radius: 30;
+}
+
+/* Labels (Text) */
+.label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Input Fields (Username, Password) */
+.text-field, .password-field {
+    -fx-background-color: transparent;
+    -fx-border-color: white;
+    -fx-border-width: 1px;
+    -fx-border-radius: 15;
+    -fx-text-fill: white;
+    -fx-padding: 8px;
+}
+
+.text-field::prompt-text, .password-field::prompt-text {
+    -fx-text-fill: rgba(255, 255, 255, 0.6);
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: white;
+    -fx-text-fill: #5F0A87;
+    -fx-background-radius: 20;
+    -fx-font-weight: bold;
+    -fx-padding: 10px;
+}
+
+/* Button Hover Effect */
+.button:hover {
+    -fx-background-color: #eee;
+}
+
+/* Button Click Animation */
+.button:pressed {
+    -fx-scale-x: 0.95;
+    -fx-scale-y: 0.95;
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    -fx-font-size: 12px;
+    -fx-text-fill: rgba(255, 255, 255, 0.8);
+}
+
+/* Sign-up Button */
+.signup-button {
+    -fx-background-color: white;
+    -fx-text-fill: #5F0A87;
+    -fx-background-radius: 20;
+}
+.root-mainmenu {
+    -fx-background-color: linear-gradient(to bottom right, #4CAF50, #2E7D32);
+}
