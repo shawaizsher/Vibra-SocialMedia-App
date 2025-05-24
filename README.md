@@ -27,10 +27,10 @@
 
 Make sure you have the following installed:
 
-- [Java JDK 17+](https://adoptium.net/)
+- Java JDK 17+
 - [JavaFX SDK](https://gluonhq.com/products/javafx/) (ensure it's configured in your IDE)
 - [MySQL](https://www.mysql.com/) or SQLite (depending on your DB)
-- [Tyrus-WebSocket] Provided in "websocket files" folder
+- Tyrus-WebSocket Provided in "websocket files" folder
 
 ## Setup
 
