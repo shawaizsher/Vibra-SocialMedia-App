@@ -1,0 +1,92 @@
+.message-scroll {
+    -fx-background-color: transparent;
+}
+
+.message-scroll .viewport {
+    -fx-background-color: transparent;
+}
+
+.message-container {
+    -fx-padding: 10;
+}
+
+.message-box {
+    -fx-padding: 8 12;
+    -fx-background-radius: 12;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+    -fx-max-width: 400;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 3, 0.0, 0, 1);
+}
+
+.sent-message {
+    -fx-background-color: #DCF8C6;
+}
+
+.received-message {
+    -fx-background-color: #FFFFFF;
+}
+.center-content {
+    -fx-background-color: #f9f9f9; /* soft white */
+    -fx-padding: 30px;
+}
+* {
+    -fx-font-family: "Raleway-SemiBold";
+}
+
+.circle-button {
+    -fx-background-radius: 50%;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+    -fx-background-color: linear-gradient(to right, #1e3c72, #2a0845);
+    -fx-cursor: hand;
+    -fx-padding: 0;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 3, 0.2, 0, 2);
+}
+.circle-button .graphic {
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.friends-list {
+    -fx-padding: 5;
+}
+
+.friend-entry {
+    -fx-background-color: #ffffff;
+    -fx-padding: 8;
+    -fx-background-radius: 10;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.05), 3, 0.2, 0, 1);
+}
+
+.friend-entry:hover {
+    -fx-background-color: #e9f2ff;
+    -fx-cursor: hand;
+}
+.friend-search {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+    -fx-border-color: #ccc;
+    -fx-padding: 6 10;
+    -fx-background-color: white;
+
+}
+
+.friend-search:hover,
+.friend-search:focused {
+    -fx-font-weight: normal;
+
+    -fx-padding: 6 10;
+}
+.friend-name-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-padding: 6 12;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+}

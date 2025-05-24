@@ -1,0 +1,64 @@
+.root {
+    -fx-background-color: #f4f4f4;
+    -fx-padding: 30;
+}
+
+/* Welcome Label */
+#welcomeLabel {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+}
+
+/* Post Box */
+#postBox {
+    -fx-background-color: #f9f9f9;
+    -fx-background-radius: 10;
+    -fx-padding: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5, 0.3, 0, 2);
+}
+
+/* Post Text Area */
+#postTextArea {
+    -fx-background-radius: 8;
+    -fx-border-color: #ddd;
+    -fx-border-radius: 8;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+}
+
+/* Add Media Buttons */
+#addPhotoBtn, #addVideoBtn {
+    -fx-background-color: #6c757d;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+}
+
+/* Post Button */
+#postBtn {
+    -fx-background-color: #007bff;
+    -fx-text-fill: white;
+    -fx-background-radius: 20;
+    -fx-padding: 5 20;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Media Label */
+#mediaLabel {
+    -fx-font-size: 12px;
+    -fx-text-fill: gray;
+}
+
+/* Posts container */
+#postsContainer {
+    -fx-spacing: 15;
+}
+.welcome-label {
+    -fx-font-family: 'Oregano';
+    -fx-font-size: 32px;
+    -fx-text-fill: #333;
+    -fx-font-weight: normal;
+}

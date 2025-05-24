@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import java.lang.String?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="NotificationsMenuController"
+            prefWidth="600" prefHeight="400" style="-fx-background-color: #FFFFFF;">
+    <center>
+        <VBox fx:id="notificationsContainer" spacing="20" style="-fx-padding: 20; -fx-background-color: white; -fx-background-radius: 10;">
+            <children>
+                <CheckBox fx:id="notificationsToggle" text="Enable Notifications"
+                          style="-fx-text-fill: #333333; -fx-font-size: 18px; -fx-font-family: 'Segoe UI Semibold';">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="18"/>
+                    </font>
+                    <styleClass>
+                        <String fx:value="custom-checkbox"/>
+                    </styleClass>
+                </CheckBox>
+
+                <Button text="Back" onAction="#handleBack"
+                        style="-fx-background-color: linear-gradient(to right, #1e3c72, #2a0845); -fx-text-fill: #FFFFFF; -fx-font-family: 'Segoe UI Semibold'; -fx-font-size: 16px; -fx-padding: 10 20; -fx-background-radius: 8;" />
+            </children>
+        </VBox>
+    </center>
+</BorderPane>

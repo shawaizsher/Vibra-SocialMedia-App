@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<?import java.net.URL?>
+<BorderPane fx:id="mainLayout" prefHeight="700" prefWidth="900" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="privacyViewController">
+
+    <!-- Top: Back Button -->
+    <top>
+        <HBox alignment="CENTER_LEFT" spacing="10" style="-fx-padding: 15 20 10 20;">
+            <Button fx:id="BackButton" onAction="#handleBackButton" style="-fx-background-color: transparent; -fx-text-fill: black;" text="← Back" />
+        </HBox>
+    </top>
+
+    <!-- Center: Scrollable Settings Content -->
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-padding: 10;" vbarPolicy="AS_NEEDED">
+            <VBox alignment="TOP_CENTER" spacing="30" style="-fx-padding: 20 40 40 40;">
+
+                <!-- Title -->
+                <Label style="-fx-font-size: 28px; -fx-font-weight: bold;" text="Settings" />
+
+                <!-- Change Password -->
+                <VBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Change Password" />
+                    <PasswordField fx:id="oldPasswordField" prefWidth="400" promptText="Old Password" />
+                    <PasswordField fx:id="newPasswordField" prefWidth="400" promptText="New Password" />
+                    <PasswordField fx:id="confirmPasswordField" prefWidth="400" promptText="Confirm New Password" />
+                </VBox>
+
+                <!-- Privacy Settings -->
+                <VBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Privacy Settings" />
+                    <CheckBox fx:id="privateProfileCheckbox" text="Make my profile private" />
+                    <CheckBox fx:id="readReceiptsCheckbox" text="Enable read receipts" />
+                    <CheckBox fx:id="onlineStatusCheckbox" text="Show my online status" />
+                </VBox>
+                <!-- Messaging & Blocked Users -->
+                <VBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Messaging Preferences" />
+                    <HBox alignment="CENTER_LEFT" spacing="10">
+                        <Label text="Who can message you:" />
+                        <ComboBox fx:id="messagePermissionComboBox" prefWidth="200">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Everyone" />
+                                    <String fx:value="Friends Only" />
+                                    <String fx:value="No One" />
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                    </HBox>
+                    <Label text="Blocked Users:" />
+                    <ListView fx:id="blockedUsersListView" prefHeight="100" prefWidth="400" />
+                    <HBox spacing="10">
+                        <TextField fx:id="blockUserField" prefWidth="250" promptText="Enter username to block" />
+                        <Button fx:id="blockUserButton" text="Block" />
+                    </HBox>
+                </VBox>
+
+                <!-- Account Settings -->
+                <VBox alignment="CENTER_LEFT" spacing="10">
+                    <Label style="-fx-font-weight: bold; -fx-font-size: 16px;" text="Account Settings" />
+                    <HBox spacing="10">
+                        <Button fx:id="deleteAccountButton" style="-fx-text-fill: red;" text="Delete My Account" onAction="#handleDeleteAccount"/>
+                    </HBox>
+                </VBox>
+
+                <!-- Save / Cancel Buttons -->
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="saveChangesButton" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Save Changes" onAction="#handleSaveChanges"/>
+                    <Button fx:id="cancelButton" text="Cancel" />
+                </HBox>
+
+            </VBox>
+        </ScrollPane>
+    </center>
+
+</BorderPane>
