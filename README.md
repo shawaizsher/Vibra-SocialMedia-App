@@ -47,7 +47,7 @@ Make sure you have the following installed:
 Adjust the path to your local JavaFX SDK accordingly.
 
 4. Set up the database:
-    - Create the database and tables using the provided `schema.sql` file.
+    - Create the database named "vibra-db" and tables using the provided `schema.sql` file.
     - Update database connection settings (URL, username, password) in your configuration class.
 
 5. Configure the SendGrid API key:
